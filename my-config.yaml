@@ -1,0 +1,15 @@
+# md-to-pdf configuration
+pdf:
+  page_size: A4
+  margin_top: "2cm"
+  margin_right: "2cm"
+  margin_bottom: "2cm"
+  margin_left: "2cm"
+  font_family: "system-ui, sans-serif"
+  font_size: "12pt"
+  line_height: "1.6"
+  code_font_family: "monospace"
+  code_font_size: "10pt"
+  theme: light
+  include_toc: false
+  toc_depth: 3

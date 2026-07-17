@@ -1,0 +1,46 @@
+[project]
+name = "md-to-pdf"
+version = "0.1.0"
+description = "Convert Markdown files to PDF with customizable styling"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "typer>=0.9.0",
+    "rich>=13.7.0",
+    "fpdf2>=2.7.0",
+    "markdown>=3.5.0",
+    "pydantic>=2.6.0",
+    "pyyaml>=6.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.3.0",
+    "mypy>=1.8.0",
+    "pre-commit>=3.6.0",
+]
+
+[build-system]
+requires = ["setuptools>=69.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+md-to-pdf = "md_to_pdf.cli:app"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "I", "UP", "W", "C90", "ANN", "T20", "PT", "SIM", "RET"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+warn_return_any = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
