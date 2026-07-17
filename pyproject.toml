@@ -25,6 +25,9 @@ dev = [
 requires = ["setuptools>=69.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools.packages.find]
+include = ["md_to_pdf*"]
+
 [project.scripts]
 md-to-pdf = "md_to_pdf.cli:app"
 
